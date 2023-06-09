@@ -1,0 +1,22 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    background: red;
+    color: white;
+
+    &__title {
+        text-align: center;
+    }
+
+    &__logo {
+        width: 100%;
+        height: 50px;
+    }
+
+    &__navigation {
+        cursor: pointer;
+        font-size: 1.4rem;
+    }
+}
