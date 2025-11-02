@@ -17,7 +17,7 @@ export async function fetchData(formText) {
 }
 
 export function updateDOM(data) {
-    document.getElementById('results').innerHTML = `<p>Subjectivity: ${data.subjectivity} </p> <p>Polarity: ${data.polarity} </p> <p>Snippet: ${data.text} </p>`;
+    document.getElementById('results').innerHTML = `<p>Polarity: ${data.polarity} </p> <p>Snippet: ${data.text} </p>`;
 }
 
 export function handleSubmit(event) {
