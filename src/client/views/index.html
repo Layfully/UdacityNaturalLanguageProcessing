@@ -2,12 +2,8 @@
 <html lang="en" dir="ltr">
     <head>
         <meta charset="utf-8">
-        <title>Test</title>
-        <link rel="stylesheet" href="/styles/resets.css">
-        <link rel="stylesheet" href="/styles/base.css">
-        <link rel="stylesheet" href="/styles/header.css">
-        <link rel="stylesheet" href="/styles/form.css">
-        <link rel="stylesheet" href="/styles/footer.css">
+        <title>NLP Article Analysis</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
 
     <body>
@@ -17,9 +13,9 @@
             <div class="header__logo">
                 <img src="https://picsum.photos/50" alt="Logo">
             </div>
-            <div class="header__navigation">
+            <nav class="header__navigation">
                 navigation
-            </div>
+            </nav>
         </header>
 
         <main>
@@ -41,14 +37,5 @@
             <p>This is a footer</p>
         </footer>
 
-        <script>
-            // Check that service workers are supported
-            if ('serviceWorker' in navigator) {
-                // Use the window load event to keep the page load performant
-                window.addEventListener('load', () => {
-                    navigator.serviceWorker.register('/service-worker.js');
-                });
-            }
-        </script>
     </body>
 </html>

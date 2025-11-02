@@ -4,8 +4,8 @@ import './styles/footer.scss'
 import './styles/form.scss'
 import './styles/header.scss'
 
-import { validateText, handleTextValidation } from './js/validateText'
-import { handleSubmit } from './js/formHandler'
+import { validateText, handleTextValidation } from './js/validateText.js'
+import { handleSubmit } from './js/formHandler.js'
 
 export {
     validateText,

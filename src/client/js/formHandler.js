@@ -5,7 +5,7 @@ export function getFormData() {
 }
 
 export async function fetchData(formText) {
-    const response = await fetch('http://localhost:8081/analyzeText', {
+    const response = await fetch('/analyzeText', {
         method: 'POST',
         credentials: 'same-origin',
         headers: {
