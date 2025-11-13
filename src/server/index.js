@@ -28,7 +28,7 @@ app.listen(PORT, function () {
 app.post('/analyzeText', analyzeText);
 
 async function analyzeText(req, res) {
-    const API_URL = "https://api-inference.huggingface.co/models/distilbert/distilbert-base-uncased-finetuned-sst-2-english";
+    const API_URL = "https://router.huggingface.co/hf-inference/models/distilbert/distilbert-base-uncased-finetuned-sst-2-english";
     const API_KEY = process.env.HF_API_KEY;
 
     try {

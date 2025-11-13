@@ -1,24 +1,68 @@
 body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    background-color: #f0f0f0; 
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #2d3748;
+  line-height: 1.6;
 }
 
 main {
-    flex: 2;
-    justify-content: center;
-    display: flex;
-    flex-direction: column;   
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem 1rem;
 }
 
 .container {
-    width: 100%;
-    padding: 0 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  width: 100%;
 }
 
 section {
-    max-width: 800px;
-    margin: 50px auto;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.results-section {
+  max-width: 600px;
+  margin: 2rem auto 0;
+  padding: 0 1rem;
+}
+
+.results-container {
+  background: white;
+  border-radius: 20px;
+  padding: 2rem;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+  min-height: 100px;
+}
+
+.results-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #2d3748;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  &::before {
+    content: "📊";
+    font-size: 1.5rem;
+  }
+}
+
+#results {
+  color: #4a5568;
+  line-height: 1.8;
+
+  &:empty::before {
+    content: "Submit a URL to analyze the article...";
+    color: #a0aec0;
+    font-style: italic;
+  }
 }

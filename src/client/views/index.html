@@ -7,35 +7,32 @@
     </head>
 
     <body>
+    <header class="header">
+        <h1 class="header__title">🔍 NLP Article Analyzer</h1>
+    </header>
 
-        <header class="header">
-            <h1 class="header__title">News article analysis</h1>
-            <div class="header__logo">
-                <img src="https://picsum.photos/50" alt="Logo">
-            </div>
-            <nav class="header__navigation">
-                navigation
-            </nav>
-        </header>
-
-        <main>
-            <section class="container">
-                <form class="" onsubmit="return Client.handleSubmit(event)">
+    <main>
+        <section class="container">
+            <form onsubmit="return Client.handleSubmit(event)">
+                <div class="form-group">
+                    <label for="name">Article</label>
                     <input id="name" type="text" name="input" value="" oninput="Client.handleTextValidation(event.target.value)" placeholder="Name">
                     <p class="alert" id="validation"></p>
-                    <input type="submit" name="" value="submit" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
-                </form>
-            </section>
+                    <input type="submit" name="" value="Analyze Article" onclick="return Client.handleSubmit(event)" onsubmit="return Client.handleSubmit(event)">
+                </div>
+            </form>
+        </section>
 
-            <section>
-                <strong>Form Results:</strong>
+        <section class="results-section">
+            <div class="results-container">
+                <div class="results-title">Analysis Results</div>
                 <div id="results"></div>
-            </section>
-        </main>
+            </div>
+        </section>
+    </main>
 
-        <footer class="footer">
-            <p>This is a footer</p>
-        </footer>
-
+    <footer class="footer">
+        <p>©2025 Adrian Gaborek NLP Article Analyzer • Built with HuggingFace</p>
+    </footer>
     </body>
 </html>
