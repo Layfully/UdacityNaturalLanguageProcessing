@@ -3,7 +3,7 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 import express from 'express';
 import cors from 'cors';
-
+import rateLimit from 'express-rate-limit';
 dotenv.config();
 
 const __filename = fileURLToPath(import.meta.url);
@@ -11,12 +11,19 @@ const __dirname = path.dirname(__filename);
 
 const app = express();
 
+// Rate limiter: limit to 100 requests per 15 minutes per IP
+const mainLimiter = rateLimit({
+    windowMs: 15 * 60 * 1000, // 15 minutes
+    max: 100, // limit each IP to 100 requests per windowMs
+    standardHeaders: true, // Return rate limit info in the `RateLimit-*` headers
+    legacyHeaders: false, // Disable the `X-RateLimit-*` headers
+});
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cors());
 app.use(express.static(path.join(__dirname, '../../dist')));
 
-app.get('/', function (req, res) {
+app.get('/', mainLimiter, function (req, res) {
     res.sendFile(path.resolve('dist/index.html'));
 });
 
